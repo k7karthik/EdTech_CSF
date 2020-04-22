@@ -142,10 +142,10 @@ populateTeacherData = (data) => {
         <div class="ui divider"></div>
         <div class="row custom-forced-width custom-grey-font">
           <div class="ui stackable four column grid">
-            <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/book-icon.svg"></div>${content_usecase.map(convertUseCase).join(", ")}</div>
-            <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/price-icon.svg"></div>${title_to_cost[content_title]}</div>
-            <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/device-icon.svg"></div>${convertDevice(title_to_device[content_title])}</div>
-          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/language-icon.svg"></div>${content_language.join(", ")}</div>
+            <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/book-icon.svg"></div>${content_usecase.map(convertUseCase).join(", ")}</div>
+            <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/price-icon.svg"></div>${title_to_cost[content_title]}</div>
+            <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/device-icon.svg"></div>${convertDevice(title_to_device[content_title])}</div>
+          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/language-icon.svg"></div>${content_language.join(", ")}</div>
         </div>
         </div>
       </div>`;
@@ -203,10 +203,10 @@ populateStudentData = (data) => {
       <div class="ui divider"></div>
       <div class="row custom-forced-width">
         <div class="ui stackable four column grid">
-          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/book-icon.svg"></div>${content_subject.join(", ")}</div>
-          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/price-icon.svg"></div>${title_to_cost[content_title]}</div>
-          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/device-icon.svg"></div>${convertDevice(title_to_device[content_title])}</div>
-        <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="./static/language-icon.svg"></div>${content_language.join(", ")}</div>
+          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/book-icon.svg"></div>${content_subject.join(", ")}</div>
+          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/price-icon.svg"></div>${title_to_cost[content_title]}</div>
+          <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/device-icon.svg"></div>${convertDevice(title_to_device[content_title])}</div>
+        <div class="column custom-grey-font left aligned"><div class="ui avatar image custom-logo"><img class="custom-icon-image" src="../static/language-icon.svg"></div>${content_language.join(", ")}</div>
       </div>
     </div>
     `
