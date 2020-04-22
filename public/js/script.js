@@ -40,6 +40,14 @@ sameWindowLink = (link) => {
   window.location = link;
 }
 
+languageDropDownChange = (val) => {
+  let oldLang = LANGUAGE;
+  LANGUAGE = val;
+  let href = window.location.href;
+  let newHref = href.replace(oldLang,LANGUAGE);
+  sameWindowLink(newHref);
+}
+
 populateData = (data, status) => {
   if (status !== "success")
     return;
@@ -242,6 +250,10 @@ onSearch = () => {
 }
 
 $("#search-button").click(onSearch);
+
+$('#language-dropdown').dropdown({
+   onChange: languageDropDownChange
+});
 
 
 $('#user-dropdown').dropdown({
