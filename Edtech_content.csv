@@ -1,4 +1,4 @@
-LANGUAGE,English
+LANGUAGE,en
 TITLE,EdTech
 HEADER_UP,Repository of free EdTech content
 HEADER_DOWN,For use by Students and Teachers
@@ -13,7 +13,7 @@ AUDIENCE_TEXT,I want content for
 DROPDOWN_TEXT,Select
 STUDENT_TEXT,Student
 TEACHER_TEXT,Teacher
-GRADE_FILTER,Who are currently studying in 
+GRADE_FILTER,Who are currently studying in
 SUBJECT_FILTER,For the subjects
 USECASE_FILTER,For what use case do you want resources
 MEDIUM_FILTER,Required medium of instruction
@@ -26,6 +26,7 @@ TAMIL_TEXT,Tamil
 TELUGU_TEXT,Telugu
 BENGALI_TEXT,Bengali
 URDU_TEXT,Urdu
+ODIYA_TEXT,Odiya
 TEACHING_TEXT,Tools for Teaching
 DEVELOPMENT_TEXT,Professional Development
 ASSESSMENT_TEXT,Tools for Assessment

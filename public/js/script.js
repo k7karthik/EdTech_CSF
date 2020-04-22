@@ -1,7 +1,6 @@
 let user = -1; // -1 Represents Unselected. 0 Represents Teachers. 1 Represents Student
 const TEACHER = 0;
 const STUDENT = 1;
-var language = "ENGLISH";
 
 showFilters = (val) => {
   $('#homepage').addClass('custom-hidden');
@@ -221,7 +220,7 @@ onSearch = () => {
       url: 'http://localhost:8000/searchTeacherMaterial',
       data: {
         use_case: $('#usecase-dropdown').dropdown('get values'),
-        language: language,
+        language: LANGUAGE,
         medium: $('#medium-dropdown').dropdown('get values')
       },
       success: populateData,
@@ -234,7 +233,7 @@ onSearch = () => {
       data: {
         subject: $('#subject-dropdown').dropdown('get values'),
         grade: grade,
-        language: language,
+        language: LANGUAGE,
         medium: $('#medium-dropdown').dropdown('get values')
       },
       success: populateData,

@@ -15,8 +15,7 @@ func SearchStudentMaterial(resp http.ResponseWriter, req *http.Request) {
 	keys := req.URL.Query()
 	resp.Header().Add("Content-Type", "application/json")
 	var grade uint32
-	var language string
-	language = "ENGLISH"
+	language := "en"
 
 	gradeString := keys.Get("grade")
 	if gradeString == "" {
@@ -37,12 +36,12 @@ func SearchStudentMaterial(resp http.ResponseWriter, req *http.Request) {
 	subjectArray, _ := keys["subject[]"]
 	mediumArray, _ := keys["medium[]"]
 	languageVal := keys.Get("language")
-	languageResult,_ := utils.CheckLanguage(languageVal)
-	if(languageResult){
+	languageResult, _ := utils.CheckLanguage(languageVal)
+	if(languageResult) {
 		language = languageVal
 	}
 
-	studentRecords, err := models.GetStudentRecords(grade, subjectArray, mediumArray,language)
+	studentRecords, err := models.GetStudentRecords(grade, subjectArray, mediumArray, language)
 	if err != nil {
 		utils.Logger.WithFields(log.Fields{
 			"grade":        grade,
@@ -77,18 +76,17 @@ func SearchTeacherMaterial(resp http.ResponseWriter, req *http.Request) {
 	keys := req.URL.Query()
 	resp.Header().Add("Content-Type", "application/json")
 
-	var language string
-	language = "ENGLISH"
+	language := "en"
 
 	useCaseArray, _ := keys["use_case[]"]
 	mediumArray, _ := keys["medium[]"]
 	languageVal := keys.Get("language")
-	languageResult,_ := utils.CheckLanguage(languageVal)
-	if(languageResult){
+	languageResult, _ := utils.CheckLanguage(languageVal)
+	if(languageResult) {
 		language = languageVal
 	}
 
-	teacherRecords, err := models.GetTeacherRecords(useCaseArray, mediumArray,language)
+	teacherRecords, err := models.GetTeacherRecords(useCaseArray, mediumArray, language)
 	if err != nil {
 		utils.Logger.WithFields(log.Fields{
 			"useCaseArray": useCaseArray,

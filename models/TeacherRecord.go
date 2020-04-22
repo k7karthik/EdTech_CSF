@@ -35,10 +35,7 @@ func GetTeacherRecords(useCaseArray []string, mediumArray []string, language str
 		tx = tx.Where("medium in (?)", mediumArray)
 	}
 
-	if language != "" {
 		tx = tx.Where("language = ?", language)
-	}
-
 
 	tx.Find(&teacherRecords)
 	return teacherRecords, nil

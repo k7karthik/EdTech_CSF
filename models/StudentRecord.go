@@ -40,9 +40,7 @@ func GetStudentRecords(grade uint32, subjectArray []string, mediumArray []string
 		tx = tx.Where("medium in (?)", mediumArray)
 	}
 
-	if language != "" {
 		tx = tx.Where("language = ?", language)
-	}
 
 	tx.Find(&studentRecords)
 	return studentRecords, nil

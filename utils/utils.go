@@ -28,7 +28,7 @@ func ParseToUint(stringNumber string) (uint32, error) {
 
 // CheckLanguage takes a language string and checks whether it exists in the language array.
 func CheckLanguage(language string)(bool, error){
-	languageArray := []string {"ENGLISH", "HINDI"}
+	languageArray := []string {"en","hi"}
 
 	for _, val := range(languageArray) {
 		 if val == language{
